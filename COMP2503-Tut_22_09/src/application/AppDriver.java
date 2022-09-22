@@ -25,13 +25,10 @@ public class AppDriver {
 		return average;
 	}
 	
-	public static double getAverage(ArrayList<Person> persons) {
-		double sum = 0;
-		if (persons.get(0).isStudent()) {
-			
-		} else if (persons.get(0).isInstructor()) {
-			
-		}
+	public static double getAverage(Measurable m) {
+		
+		//(...)
+		
 		double average = 0;
 		return average;
 	}
