@@ -2,6 +2,6 @@ package model;
 
 public interface Measurable {
 	
-	public abstract void getAmount();
+	public abstract double getAmount();
 	
 }
