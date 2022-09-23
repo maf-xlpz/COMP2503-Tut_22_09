@@ -3,35 +3,33 @@ import java.util.ArrayList;
 
 public class Department {
 	
-	ArrayList<Person> people = new ArrayList<Person>();
+	ArrayList<Measurable> people = new ArrayList<Measurable>();
 
-	public void addPerson(Person person) {
+	public void addPerson(Measurable person) {
 		people.add(person);
 	}
 	
-	public ArrayList<Student> getStudents() {
-		ArrayList<Student> students = new ArrayList<Student>();
+	public ArrayList<Measurable> getStudents() {
+		ArrayList<Measurable> students = new ArrayList<Measurable>();
 		for(int i=0; i < people.size(); i++) {
-			if (people.get(i).isStudent()) {
-				Person person = new Student();
-				person = people.get(i);
+			Measurable person = people.get(i);
+			if (person instanceof Student) {
 				Student student = (Student) person;
 				students.add(student);
 				}
-			}
+		}
 		return students;
 	}
 	
-	public ArrayList<Instructor> getInstructors() {
-		ArrayList<Instructor> instructors = new ArrayList<Instructor>();
+	public ArrayList<Measurable> getInstructors() {
+		ArrayList<Measurable> instructors = new ArrayList<Measurable>();
 		for(int i=0; i < people.size(); i++) {
-			if (people.get(i).isInstructor()) {
-				Person person = new Instructor();
-				person = people.get(i);
+			Measurable person = people.get(i);
+			if (person instanceof Instructor) {
 				Instructor instructor = (Instructor) person;
 				instructors.add(instructor);
 				}
-			}
+		}
 		return instructors;
 	}
 

@@ -6,7 +6,6 @@ them all:
 	- students
 	- instructors
 	- inheritance
-	- polymorphism
 
 7. What relationship does exist between the department and the students?
 	- Aggregation 

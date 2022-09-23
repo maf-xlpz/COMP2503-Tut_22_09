@@ -6,26 +6,26 @@ import model.*;
 public class AppDriver {
 	
 	public static double getGradesAverage(Department department) {
-		ArrayList<Student> students = department.getStudents();
+		ArrayList<Measurable> students = department.getStudents();
 		double sum = 0;
 		for (int i=0; i<students.size(); i++) {
-			sum = sum + students.get(i).getGrade();
+			sum = sum + ((Student) students.get(i)).getGrade();
 		}
 		double average = sum / students.size();
 		return average;
 	}
 	
 	public static double getSalaryAverage(Department department) {
-		ArrayList<Instructor> instructors = department.getInstructors();
+		ArrayList<Measurable> instructors = department.getInstructors();
 		double sum = 0;
 		for (int i=0; i<instructors.size(); i++) {
-			sum = sum + instructors.get(i).getSalary();
+			sum = sum + ((Instructor) instructors.get(i)).getSalary();
 		}
 		double average = sum / instructors.size();
 		return average;
 	}
 	
-	public static double getAverage(ArrayList<Person> list) {
+	public static double getAverage(ArrayList<Measurable> list) {
 		double sum = 0;
 		for (int i=0; i<list.size(); i++) {
 			sum = sum + list.get(i).getAmount();
