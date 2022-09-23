@@ -25,12 +25,17 @@ public class AppDriver {
 		return average;
 	}
 	
-	public static double getAverage(Measurable m) {
-		
-		//(...)
-		
-		double average = 0;
+	public static double getAverage(ArrayList<Person> list) {
+		double sum = 0;
+		for (int i=0; i<list.size(); i++) {
+			sum = sum + list.get(i).getAmount();
+		}
+		double average = sum / list.size();
 		return average;
+	}
+	
+	public static double getValue(Measurable m) {
+		return m.getAmount();
 	}
 
 	public static void main (String args[]) {
@@ -65,6 +70,8 @@ public class AppDriver {
 		System.out.println(department.getInstructors().toString());
 		System.out.println(getGradesAverage(department));
 		System.out.println(getSalaryAverage(department));
+		System.out.println(getAverage(department.getStudents()));
+		System.out.println(getAverage(department.getInstructors()));
 
 	}
 	
