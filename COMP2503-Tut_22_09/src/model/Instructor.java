@@ -38,9 +38,8 @@ public class Instructor extends Person implements Measurable{
 	}
 
 	@Override
-	public void getAmount() {
-		// TODO Auto-generated method stub
-		
+	public double getAmount() {
+		return salary;
 	}
 
 }
